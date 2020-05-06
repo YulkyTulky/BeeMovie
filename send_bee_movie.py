@@ -4,9 +4,8 @@ from time import sleep
 
 def get_words():
     with open("script.txt", "r") as script:
-        for line in script:
-            for word in line.strip().split(" "):
-                yield word
+        for word in script:
+            yield word.strip()
 
 
 sleep(5)  # better get your cursor ready!!!
